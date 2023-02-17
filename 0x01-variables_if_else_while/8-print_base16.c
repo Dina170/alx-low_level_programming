@@ -12,19 +12,19 @@
 int main(void)
 {
 	int a = 0;
+	char Lch = 'a';
+
 	while (a < 10)
 	{
 		putchar(a + '0');
 		a++;
 	}
 
-	char Lch = 'a';
-	
 	while (Lch <= 'f')
 	{
 		putchar(Lch);
 		Lch++;
-	}	
+	}
 	putchar('\n');
 
 	return (0);
