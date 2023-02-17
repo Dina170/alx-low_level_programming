@@ -21,9 +21,9 @@ int main(void)
 	char Lch = 'a';
 	
 	while (Lch <= 'f')
-	{		
-		putchar(Lch);			
-		Lch++;			
+	{
+		putchar(Lch);
+		Lch++;
 	}	
 	putchar('\n');
 
