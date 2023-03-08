@@ -8,13 +8,13 @@
   */
 int _strlen_recursion(char *s)
 {
-	if (*s == '\0')
-	{
-		return (0);
-	}
+    if (*s == '\0')
+    {
+	return (0);
+    }
 
-	s++;
-	return (_strlen_recursion(s) + 1);
+    s++;
+    return (_strlen_recursion(s) + 1);
 }
 
 /**
@@ -28,17 +28,17 @@ int _strlen_recursion(char *s)
 
 int isPalindrome(char *str, int low, int high)
 {
-    if (low >= high)
-    {
-        return (1);
-    }
+	if (low >= high)
+    	{
+        	return (1);
+    	}
 
-    if (str[low] != str[high])
-    {
-        return (0);
-    }
+    	if (str[low] != str[high])
+   	{
+        	return (0);
+    	}
 
-    return isPalindrome(str, low + 1, high - 1);
+    	return isPalindrome(str, low + 1, high - 1);
 }
 
 
@@ -48,7 +48,7 @@ int isPalindrome(char *str, int low, int high)
   *
   * Return: integer value
   */
-int is_palindrome(char *s) 
+int is_palindrome(char *s)
 {
 	if (*s == '0')
 		return (1);
