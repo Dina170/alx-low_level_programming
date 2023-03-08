@@ -28,11 +28,13 @@ int _strlen_recursion(char *s)
 
 int isPalindrome(char *str, int low, int high)
 {
-    if (low >= high) {
+    if (low >= high)
+    {
         return (1);
     }
 
-    if (str[low] != str[high]) {
+    if (str[low] != str[high])
+    {
         return (0);
     }
 
@@ -46,7 +48,6 @@ int isPalindrome(char *str, int low, int high)
   *
   * Return: integer value
   */
-
 int is_palindrome(char *s) 
 {
 	if (*s == '0')
