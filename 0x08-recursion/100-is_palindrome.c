@@ -35,10 +35,10 @@ int isPalindrome(char *str, int low, int high)
 
 	if (str[low] != str[high])
 	{
-        	return (0);
+		return (0);
 	}
 
-	return isPalindrome(str, low + 1, high - 1);
+	return (isPalindrome(str, low + 1, high - 1));
 }
 
 
