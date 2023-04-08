@@ -29,7 +29,7 @@ int main(int argc, char **argv)
   */
 void copy_file(const char *src, const char *dest)
 {
-	int from, to, w, actualNum;
+	int from, to, actualNum;
 	char buff[1024];
 
 	from = open(src, O_RDONLY);
@@ -38,12 +38,11 @@ void copy_file(const char *src, const char *dest)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
 		exit(98);
 	}
+
 	to = open(dest, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	actualNum = read(from, buff, 1024);
-	w = write(to, buff, actualNum);
-	while (actualNum > 0)
+	while ((actualNum = read(from, buff, 1024)) > 0)
 	{
-		if (w == -1 || to == -1)
+		if (write(to, buff, actualNum) != actualNum || to == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest);
 			exit(99);
